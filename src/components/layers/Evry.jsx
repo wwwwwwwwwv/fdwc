@@ -7,8 +7,8 @@ import React from 'react'
 
 const Evry = () => {
   return (
-    <Box w={'100%'} display={'flex'} justifyContent={'center'}>
-<Box border={'1px solid black'} borderRadius={'30px'} bg={'#ffffffd0'} h={'50vh'} w={'80%'} display={'flex'} justifyContent={'center'} >
+    <Box w={'100%'} h={'100%'}  display={'flex'} justifyContent={'center'}>
+<Box border={'1px solid black'} borderRadius={'30px'} bg={'#ffffffd0'} h={'60vh'} w={'80%'} display={'flex'} justifyContent={'center'} >
          <Box   borderRadius={'50px'} padding={'10px 20px'} bg={' '} w={'100%'} h={'30vh'}>
         <Text color={'black'} fontWeight={'900'} fontSize={'40px'} textAlign={'center'}>
         Часто Задаваемые Вопросы
