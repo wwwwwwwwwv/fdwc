@@ -77,7 +77,7 @@ const About = () => {
   };
 
   return (
-    <Container fontFamily={'cursive'} maxW="container.xl" padding={10}>
+    <Container  fontFamily={'cursive'} maxW="container.xl" padding={10}>
       <Heading fontFamily={'cursive'} as="h1" size="2xl" mb={4} textAlign="center">
         Добавьте свой рецепт!
       </Heading>

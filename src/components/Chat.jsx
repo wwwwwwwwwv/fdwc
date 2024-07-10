@@ -266,7 +266,7 @@ const Chat = () => {
   return (
 
     <Main>
-   <Box  h={'100%'}  display={'flex'} alignItems={'center'} justifyContent={'center'}  w={'100%'} >
+   <Box   h={'100%'}  display={'flex'} alignItems={'center'} justifyContent={'center'}  w={'100%'} >
       <Container  boxShadow={'0px 5px 35px 10px rgba(0, 0, 0, 0.2)'}border={'1px solid black'}  p={5} borderRadius={'10px'} bg={'#ffffffd0  '} w={'100%'}>
         <Heading fontFamily={'cursive'} as="h1" size="lg" mb={4}>
           Поиск рецептов

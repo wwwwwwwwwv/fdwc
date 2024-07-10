@@ -5,7 +5,7 @@
   const Contact = () => {
     
     return (
-      <Box   display={'flex'} justifyContent={'space-between'} alignItems={'center'} padding={'50px'} w={'100%'} h={'33vh'}  bg={' #ffffffd0'} > 
+      <Box bgImage={'pizzz.png'}  display={'flex'} justifyContent={'space-between'} alignItems={'center'} padding={'50px'} w={'100%'} h={'33vh'}  bg={' #ffffffd0'} > 
        <Box display={'grid'} gap={'5px'}>
        <Text  fontWeight={'700'} fontSize={'20px'} padding={'15px 0px'}>Связаться </Text> 
 

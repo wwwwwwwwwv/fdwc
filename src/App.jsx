@@ -12,7 +12,7 @@ const App = () => {
 
 
   return (
-  <Box fontFamily={'cursive'}  >
+  <Box  fontFamily={'cursive'}  >
 
 
 <>
