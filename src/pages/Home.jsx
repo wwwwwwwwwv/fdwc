@@ -11,7 +11,7 @@ import Main from '../components/layers/Main'
 const Home = () => {
   return (
     <Main>
- <Box    fontFamily={'cursive'} h={'100%'}>
+ <Box   fontFamily={'cursive'} h={'100%'}>
     <br />
     <br />
         <Hero/>
