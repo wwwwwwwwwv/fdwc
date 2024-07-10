@@ -32,7 +32,7 @@ const recipes = [
   {
     name: 'Пицца',
     ingredients: ['мука ', 'томатный соус ', 'сыр ', 'ветчина '],
-    imageUrl: '/public/пицца.jpg',
+    imageUrl: 'https://mykaleidoscope.ru/x/uploads/posts/2023-12/1703240013_mykaleidoscope-ru-p-dieticheskaya-pitstsa-vkontakte-65.jpg',
     cookingTime: '30 минут',
     description: 'Классическая пицца с томатным соусом, сыром и ветчиной.',
     reviews: [
