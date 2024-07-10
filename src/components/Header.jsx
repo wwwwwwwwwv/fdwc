@@ -48,6 +48,11 @@ const Header = () => {
       name:'Recept',
       path:'/chat'
     },
+    {
+      name:'Plus',
+      path:'/about'
+    },
+
 
  
  
@@ -124,7 +129,6 @@ const Header = () => {
 <br />
 
 <Box borderRadius={'10px'} gap={'5px'} display={'flex'} alignItems={'center'} justifyContent={'center'} h={'10vh'} w={'45%'} bg={'#4671D5'}>
-<FaPlus /><Link  to={'/about'}>Plus recept </Link> 
 
 </Box>
         <br />

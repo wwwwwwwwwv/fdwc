@@ -6,7 +6,6 @@ import {
   Input,
   Textarea,
   Button,
-  Flex,
   FormControl,
   FormLabel,
   FormHelperText,
@@ -14,7 +13,9 @@ import {
   Image,
   Stack,
   Divider,
+  Text,
 } from '@chakra-ui/react';
+import Main from './Main';
 
 const About = () => {
   const [recipes, setRecipes] = useState([]);
@@ -62,7 +63,7 @@ const About = () => {
       });
     } else {
       toast({
-        title: 'Пожалуйста, заполните все поля!',
+        title: 'Please fill in all fields!',
         status: 'error',
         duration: 5000,
         isClosable: true,
@@ -71,25 +72,33 @@ const About = () => {
   };
 
   const handleImageChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      setRecipeImage(e.target.files[0]);
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setRecipeImage(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
     }
   };
 
   return (
-    <Container  fontFamily={'cursive'} maxW="container.xl" padding={10}>
+
+    <Main>
+ <Container borderRadius={'10px'} bg={'#ffffffd0'} fontFamily={'cursive'} maxW="container.xl" padding={10}>
       <Heading fontFamily={'cursive'} as="h1" size="2xl" mb={4} textAlign="center">
-        Добавьте свой рецепт!
+        Добавтье свой рецепт!
       </Heading>
       <Box mb={4}>
         <Heading fontFamily={'cursive'} as="h2" size="md">
-          Ваши баллы: {userPoints}
+        Ваши баллы: {userPoints}
         </Heading>
       </Box>
       <form onSubmit={(e) => e.preventDefault()}>
         <FormControl mb={4}>
           <FormLabel htmlFor="recipeName">Название рецепта:</FormLabel>
           <Input
+          border={'1px solid black'}
             id="recipeName"
             type="text"
             value={recipeName}
@@ -97,28 +106,30 @@ const About = () => {
           />
         </FormControl>
         <FormControl mb={4}>
-          <FormLabel htmlFor="ingredients">Ингредиенты (через запятую):</FormLabel>
+          <FormLabel htmlFor="ingredients">Ингридиенты (через запятую):</FormLabel>
           <Textarea
+           border={'1px solid black'}
             id="ingredients"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
           <FormHelperText>
-            Введите ингредиенты, разделяя их запятой (например, мука, сахар,
-            яйца).
+            Например (e.g., Огурец, мука, яйца).
           </FormHelperText>
         </FormControl>
         <FormControl mb={4}>
-          <FormLabel htmlFor="instructions">Инструкции:</FormLabel>
+          <FormLabel htmlFor="instructions">Инструкция :</FormLabel>
           <Textarea
+           border={'1px solid black'}
             id="instructions"
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
           />
         </FormControl>
         <FormControl mb={4}>
-          <FormLabel htmlFor="recipeImage">Изображение рецепта:</FormLabel>
+          <FormLabel htmlFor="recipeImage">Картинка рецепта:</FormLabel>
           <Input
+          
             type="file"
             id="recipeImage"
             accept="image/*"
@@ -130,28 +141,27 @@ const About = () => {
         </Button>
       </form>
 
-   
       <Heading fontFamily={'cursive'} as="h2" size="md" mt={8}>
-        Список рецептов
+        Рецепты
       </Heading>
       <Stack spacing={4} mt={4}>
         {recipes.map((recipe, index) => (
-          <Box key={index}>
-            <Heading as="h3" size="md">
+          <Box key={index} borderWidth="1px" borderRadius="lg" p={4}>
+            <Heading fontSize={'25px'} as="h3" size="md">
               {recipe.name}
             </Heading>
             {recipe.image && (
-              <Image src={URL.createObjectURL(recipe.image)} alt={recipe.name} borderRadius="md" />
+              <Image w={'200px'} src={recipe.image} alt={recipe.name} borderRadius="md" mt={2} />
             )}
-            <Divider />
-            <Box>
-              <Text>Ингредиенты: {recipe.ingredients.join(', ')}</Text>
-              <Text>Инструкции: {recipe.instructions}</Text>
-            </Box>
+            <Divider my={2} />
+            <Text fontSize={'20px'}><strong >Ингридиенты:</strong> {recipe.ingredients.join(', ')}</Text>
+            <Text fontSize={'20px'}><strong>Инструкция:</strong> {recipe.instructions}</Text>
           </Box>
         ))}
       </Stack>
     </Container>
+    </Main>
+   
   );
 };
 
