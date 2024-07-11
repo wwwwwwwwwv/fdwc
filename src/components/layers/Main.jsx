@@ -5,7 +5,7 @@ import Header from '../Header'
 
 const Main = ({children}) => {
   return (
-    <Box h={'288vh'}  bgImage={'/pizzz.png'} w={'100%'} bgAttachment={'fixed'}   bgSize={'cover'}    zIndex={'0'} >
+    <Box minW={'100%'} h={'288vh'}  bgImage={'/pizzz.png'} w={'100%'} bgAttachment={'fixed'}   bgSize={'cover'}    zIndex={'0'} >
       <Header/>
       <Box  mt={'10vh'}> 
         {children}
