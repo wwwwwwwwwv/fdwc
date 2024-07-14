@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import React, {  } from 'react';
 import { FaAlignJustify } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 import { AspectRatio } from '@chakra-ui/react'
 
 import {
@@ -48,10 +48,7 @@ const Header = () => {
       name:'Recept',
       path:'/chat'
     },
-    {
-      name:'Plus',
-      path:'/about'
-    },
+ 
 
 
  
@@ -63,10 +60,9 @@ const Header = () => {
 
 
 
-
   return (
-  <Box   padding={'10px 100px'}>
-      <Box maxWidth={'100%'}  border={'1px solid black'}  boxShadow={'0px 5px 10px 2px rgba(0, 0, 0, 0.2)'} w={'100%'} h={'14vh'} bg={' #ffffffd0'} padding={'10px 60px'} borderRadius={'50px'}>
+  <Box  padding={'10px 100px'}>
+      <Box   border={'1px solid black'}  boxShadow={'0px 5px 10px 2px rgba(0, 0, 0, 0.2)'} w={'100%'} h={'14vh'} bg={' #ffffffd0'} padding={'10px 60px'} borderRadius={'50px'}>
         <Box  w={'170vh'} h={'12vh'}  color={'#fff'}   >
           <Container fontWeight={'700'}  fontSize={'20px'} maxW={'container.xl'}  top={0}>
             <Flex justify={'space-between'} align={'center'} h={'10vh'} > 
@@ -131,6 +127,11 @@ const Header = () => {
   </TableContainer>
 <br />
 
+<Box boxShadow={' 4px 4px 8px 0px rgba(0, 144, 255, 0.2)'}  gap={'5px'} fontSize={'20px'} display={'flex'} borderRadius={'50px'} justifyContent={'center'} alignItems={'center'} h={'10%'} w={'60%'} bg={'#4671D5'}  _hover={{bg:'#1240AB'}}>
+<FaPlus />
+<Link to={'/about'}>Plus recept</Link>
+  
+</Box>
 
         <br />
 <AspectRatio ratio={16 / 9}>
