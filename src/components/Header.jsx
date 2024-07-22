@@ -62,7 +62,7 @@ const Header = () => {
 
   return (
   <Box  padding={'10px 100px'}>
-      <Box   border={'1px solid black'}  boxShadow={'0px 5px 10px 2px rgba(0, 0, 0, 0.2)'} w={'100%'} h={'14vh'} bg={' #ffffffd0'} padding={'10px 60px'} borderRadius={'50px'}>
+      <Box  maxWidth={'100%'}  border={'1px solid black'}  boxShadow={'0px 5px 10px 2px rgba(0, 0, 0, 0.2)'} w={'100%'} h={'14vh'} bg={' #ffffffd0'} padding={'10px 60px'} borderRadius={'50px'}>
         <Box  w={'170vh'} h={'12vh'}  color={'#fff'}   >
           <Container fontWeight={'700'}  fontSize={'20px'} maxW={'container.xl'}  top={0}>
             <Flex justify={'space-between'} align={'center'} h={'10vh'} > 
